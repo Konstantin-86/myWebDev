@@ -1,11 +1,22 @@
 .inner__skills {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
   .skills__text {
     font-family: cursive;
     font-size: 36px;
     line-height: 150%;
     width: 400px;
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
   .skills__hard {
     span {
@@ -30,6 +41,9 @@
     padding-left: 30px;
     background: var(--bgNeo);
     box-shadow: var(--shadow);
+    &:hover {
+      box-shadow: var(--shadowHover);
+    }
     &::after {
       position: absolute;
       content: "";

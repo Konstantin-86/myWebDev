@@ -6,12 +6,15 @@
 .logo {
   @media (max-width: 768px) {
     margin-right: auto;
+    color: #f5f0f0;
   }
 }
 .header {
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
   @media (max-width: 768px) {
     justify-content: left;
   }

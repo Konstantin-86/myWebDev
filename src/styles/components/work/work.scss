@@ -1,0 +1,6 @@
+.work__title {
+  margin-bottom: 30px;
+  &::first-letter {
+    color: var(--accentColor);
+  }
+}
