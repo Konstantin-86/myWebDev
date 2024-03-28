@@ -1,0 +1,18 @@
+:root {
+  --light: #ddd4d4cc;
+  --dark: #242121;
+}
+body {
+  background-color: var(--light);
+  color: var(--dark);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
