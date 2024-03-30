@@ -1,10 +1,19 @@
-import ThemeToogle from "./Theme";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
 
+import ThemeToogle from "./Theme";
 import "../../styles/components/header/header.scss";
 
 import logo from "../../images/logo.png";
+import Burger from "./Burger";
 
 const Header = () => {
+  const { burgerHadler, setBurgerHandler } = useContext(ThemeContext);
+  const checkWidth = () => {
+    if (window.innerWidth < 768) {
+      setBurgerHandler(!burgerHadler);
+    }
+  };
   return (
     <>
       <div className="container">
@@ -12,24 +21,19 @@ const Header = () => {
           <a href="#" className="logo">
             <img className="header__logo" src={logo} alt="logo" />
           </a>
-          <ul className="list">
-            <li>
-              <a className="list__link" href="#">
-                Skills
-              </a>
-            </li>
-            <li>
-              <a className="list__link" href="#">
+          <ul className={burgerHadler ? "list" : "list--active"}>
+            <li onClick={checkWidth}>
+              <a className="list__link" href="#portfolio">
                 Portfolio
               </a>
             </li>
-            <li>
-              <a className="list__link" href="#">
+            <li onClick={checkWidth}>
+              <a className="list__link" href="#workExperience">
                 WorkExperience
               </a>
             </li>
-            <li>
-              <a className="list__link" href="#">
+            <li onClick={checkWidth}>
+              <a className="list__link" href="#contacts">
                 Contacts
               </a>
             </li>
@@ -37,11 +41,7 @@ const Header = () => {
           <div className="header__theme">
             <ThemeToogle />
           </div>
-          <div className="header__burger">
-            <span className="burger__line1"></span>
-            <span className="burger__line2"></span>
-            <span className="burger__line3"></span>
-          </div>
+          <Burger />
         </header>
       </div>
     </>

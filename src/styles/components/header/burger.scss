@@ -1,0 +1,38 @@
+.burger__inner {
+  position: relative;
+  z-index: 100;
+  width: 30px;
+  height: 30px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.burger--open {
+  width: 100%;
+  height: 100%;
+  color: #efa335;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .burgerLine1 {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #efa335;
+    rotate: (45deg);
+  }
+  .burgerLine2 {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #efa335;
+    rotate: (-45deg);
+  }
+}

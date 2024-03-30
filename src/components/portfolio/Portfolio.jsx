@@ -12,21 +12,20 @@ import react from "../../images/react.webp";
 import next from "../../images/next.png";
 import gulp from "../../images/gulp.webp";
 import vite from "../../images/vite.svg";
+import scss from "../../images/scss.png";
+import redux from "../../images/redux.png";
 
 const Portfolio = () => {
   return (
     <>
       <div className="container">
-        <h2 className="portfolio__title">My Portfolio</h2>
+        <h2 id="portfolio" className="portfolio__title">
+          My Portfolio
+        </h2>
         <div className="portfolio__wrap">
           <div className="portfolio__item">
             <div className="portfolio__item-image">
-              <img
-                loading="lazy"
-                className="portfolio-image animate"
-                src={lime}
-                alt="lime"
-              />
+              <img className="portfolio-image animate" src={lime} alt="lime" />
               <a
                 className="portfolio__link"
                 href="https://lime-studio-next-js.vercel.app/"
@@ -50,7 +49,7 @@ const Portfolio = () => {
                   <img title="HTML" src={html} alt="html" />
                 </li>
                 <li>
-                  <img title="CSS" src={css} alt="css" />
+                  <img title="scss" src={scss} alt="scss" />
                 </li>
                 <li>
                   <img title="react" src={react} alt="react" />
@@ -59,7 +58,7 @@ const Portfolio = () => {
                   <img title="Next.js" src={next} alt="next" />
                 </li>
                 <li>
-                  <img title="Vite" src={vite} alt="vite" />
+                  <img title="Redux Toolkit" src={redux} alt="redux" />
                 </li>
               </ul>
             </div>
@@ -68,7 +67,6 @@ const Portfolio = () => {
           <div className="portfolio__item">
             <div className="portfolio__item-image ">
               <img
-                loading="lazy"
                 className="portfolio-image animate"
                 src={elDacha}
                 alt="elDacha"
@@ -142,9 +140,6 @@ const Portfolio = () => {
                 </li>
                 <li>
                   <img title="gulp" src={gulp} alt="gulp" />
-                </li>
-                <li>
-                  <img title="Vite" src={vite} alt="vite" />
                 </li>
               </ul>
             </div>

@@ -1,26 +1,7 @@
 .header__swither {
   margin-right: 20px;
 }
-.theme-toggle {
-  border-radius: 9px;
-  background: var(--bgNeo);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease-in;
-  svg {
-    width: 30px;
-    height: 30px;
-  }
-}
 
-.theme-toggle--toggled {
-  border-radius: 9px;
-  background: var(--bgNeo);
-  box-shadow: var(--shadow);
-  svg {
-    fill: rgb(255, 255, 255);
-    path {
-      fill: rgb(255, 255, 255);
-      color: rgb(255, 255, 255);
-    }
-  }
+.switchSvg {
+  transition: all 0.5s;
 }

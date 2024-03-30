@@ -14,6 +14,7 @@ export default function Skills() {
                 "Привет, коллеги, меня зовут Константин и я Frontend Developer!",
               ]}
               typeSpeed={40}
+              startDelay={1500}
             />
           </div>
 
@@ -31,11 +32,6 @@ export default function Skills() {
               </ul>
             </div>
           </div>
-          {/* <div className="skills__soft">
-          <h2>
-            <span>Soft</span> skills
-          </h2>
-        </div> */}
         </div>
       </div>
     </>
