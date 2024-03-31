@@ -18,6 +18,12 @@ function App() {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 2000);
+  }, []);
+
+  useEffect(() => {
     if (localStorage.getItem("theme") === "dark") {
       setCurrentTheme("dark");
     }
@@ -38,18 +44,7 @@ function App() {
     "--shadow": "-5px 5px 10px #2a2828, 5px -5px 10px #383636",
     "--shadowHover": "inset -5px 5px 10px #2a2828, inset 5px -5px 10px #383636",
   };
-  useEffect(() => {
-    const handleWindowLoad = () => {
-      console.log("loaded");
-      setLoad(false);
-    };
 
-    window.addEventListener("load", handleWindowLoad);
-
-    return () => {
-      window.removeEventListener("load", handleWindowLoad);
-    };
-  }, []);
   return (
     <ThemeContext.Provider
       value={{ currentTheme, setCurrentTheme, burgerHadler, setBurgerHandler }}
