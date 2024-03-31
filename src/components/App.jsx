@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { createContext } from "react";
 
+import Portfolio from "./portfolio/Portfolio";
 import "../styles/main/App.css";
 
 import Contacts from "./contacts/Contacts";
 import Header from "./header/Header";
-import Portfolio from "./portfolio/Portfolio";
 import Preload from "./preloader/Preload";
 import Skills from "./skills/Skills";
 import Work from "./work/Work";
@@ -40,9 +40,8 @@ function App() {
   };
   useEffect(() => {
     const handleWindowLoad = () => {
-      setTimeout(() => {
-        setLoad(false);
-      }, 1500);
+      console.log("loaded");
+      setLoad(false);
     };
 
     window.addEventListener("load", handleWindowLoad);
