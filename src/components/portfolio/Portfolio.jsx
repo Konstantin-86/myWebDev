@@ -5,6 +5,7 @@ import shance from "../../images/shancePage.png";
 import elDacha from "../../images/ElDacha.png";
 import denis from "../../images/denis.png";
 import gastro from "../../images/gastro.png";
+import pressWall from "../../images/pressWall.jpg";
 
 import html from "../../images/html.png";
 import css from "../../images/css.png";
@@ -228,6 +229,45 @@ const Portfolio = () => {
                 </li>
                 <li>
                   <img title="Vite" src={vite} alt="vite" />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="portfolio__item">
+            <div className="portfolio__item-image">
+              <img
+                loading="lazy"
+                className="portfolio-image animate"
+                src={pressWall}
+                alt="pressWall"
+              />
+              <a
+                className="portfolio__link"
+                href="https://konstantin-86.github.io/pressWall/"
+                target="_blank"
+              >
+                посмотреть
+              </a>
+            </div>
+            <div className="portfolio__item-text">
+              <a
+                href="https://konstantin-86.github.io/pressWall/"
+                target="_blank"
+                title="Открыть в новой вкладке"
+                className="item-text__title"
+              >
+                pressWall
+              </a>
+              <p className="item-text__description">Landing Page</p>
+              <ul className="stack__list">
+                <li>
+                  <img title="HTML" src={html} alt="html" />
+                </li>
+                <li>
+                  <img title="CSS" src={css} alt="css" />
+                </li>
+                <li>
+                  <img title="gulp" src={gulp} alt="gulp" />
                 </li>
               </ul>
             </div>

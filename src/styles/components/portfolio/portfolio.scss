@@ -100,7 +100,7 @@
 .portfolio__wrap {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
   @media (max-width: 768px) {
     margin-bottom: 50px;
